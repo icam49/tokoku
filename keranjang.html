@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Keranjang Belanja - TokoKu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+    }
+
+    .header {
+      background: #ff5722;
+      padding: 15px;
+      color: white;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .cart-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-bottom: 15px;
+    }
+
+    .cart-item img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .item-info {
+      flex-grow: 1;
+    }
+
+    .item-name {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .item-price {
+      color: #e91e63;
+      margin-top: 5px;
+    }
+
+    .remove-btn {
+      background: red;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .total {
+      text-align: right;
+      font-size: 18px;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    .empty {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 18px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    🛒 Keranjang Belanja
+  </div>
+
+  <div class="container" id="cartContainer">
+    <!-- Produk dari keranjang akan ditampilkan di sini -->
+  </div>
+
+  <script>
+    const cartContainer = document.getElementById("cartContainer");
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    function renderCart() {
+      cartContainer.innerHTML = "";
+
+      if (cart.length === 0) {
+        cartContainer.innerHTML = `<div class="empty">Keranjang kamu masih kosong.</div>`;
+        return;
+      }
+
+      let total = 0;
+
+      cart.forEach((item, index) => {
+        total += item.price;
+
+        const cartItem = document.createElement("div");
+        cartItem.className = "cart-item";
+        cartItem.innerHTML = `
+          <img src="${item.image}" alt="${item.name}">
+          <div class="item-info">
+            <div class="item-name">${item.name}</div>
+            <div class="item-price">Rp ${item.price.toLocaleString()}</div>
+          </div>
+          <button class="remove-btn" onclick="removeItem(${index})">Hapus</button>
+        `;
+        cartContainer.appendChild(cartItem);
+      });
+
+      const totalDiv = document.createElement("div");
+      totalDiv.className = "total";
+      totalDiv.textContent = `Total: Rp ${total.toLocaleString()}`;
+      cartContainer.appendChild(totalDiv);
+    }
+
+    function removeItem(index) {
+      cart.splice(index, 1);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      renderCart();
+    }
+
+    renderCart();
+  </script>
+</body>
+</html>

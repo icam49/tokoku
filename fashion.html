@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Fashion - TokoKu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+    }
+
+    .header {
+      background: #ff4081;
+      padding: 15px;
+      color: white;
+      font-size: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .nav {
+      background: white;
+      padding: 10px;
+      display: flex;
+      gap: 15px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #555;
+      font-weight: bold;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .product {
+      background: white;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .product:hover {
+      transform: scale(1.05);
+    }
+
+    .product img {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    .product-name {
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    .product-price {
+      color: #e53935;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div>Kategori: Fashion</div>
+    <div>🛍️</div>
+  </div>
+
+  <div class="nav">
+    <a href="index.html">Beranda</a>
+    <a href="kecantikan.html">Kecantikan</a>
+    <a href="elektronik.html">Elektronik</a>
+  </div>
+
+  <div class="product-grid">
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80" alt="Kaos Oversize">
+      <div class="product-name">Kaos Oversize Unisex</div>
+      <div class="product-price">Rp 75.000</div>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1600185365483-26d4fe3c34df?auto=format&fit=crop&w=400&q=80" alt="Hoodie Trendy">
+      <div class="product-name">Hoodie Streetwear</div>
+      <div class="product-price">Rp 120.000</div>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1580674286480-1f1ad0876f9c?auto=format&fit=crop&w=400&q=80" alt="Celana Cargo">
+      <div class="product-name">Celana Cargo Pria</div>
+      <div class="product-price">Rp 95.000</div>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1620207461024-cb4b1b8c2a98?auto=format&fit=crop&w=400&q=80" alt="Dress Wanita">
+      <div class="product-name">Mini Dress Floral</div>
+      <div class="product-price">Rp 139.000</div>
+    </div>
+  </div>
+</body>
+</html>

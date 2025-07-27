@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kecantikan - TokoKu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #fff3f7;
+    }
+
+    .header {
+      background: #ec407a;
+      padding: 15px;
+      color: white;
+      font-size: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .nav {
+      background: white;
+      padding: 10px;
+      display: flex;
+      gap: 15px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #555;
+      font-weight: bold;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .product {
+      background: white;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .product:hover {
+      transform: scale(1.03);
+    }
+
+    .product img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .product-name {
+      margin-top: 10px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .product-price {
+      color: #e91e63;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div>Kategori: Kecantikan</div>
+    <div>💄</div>
+  </div>
+
+  <div class="nav">
+    <a href="index.html">Beranda</a>
+    <a href="fashion.html">Fashion</a>
+    <a href="elektronik.html">Elektronik</a>
+  </div>
+
+  <div class="product-grid">
+    <!-- 20 Produk Kecantikan -->
+    <!-- Gambar diambil dari Unsplash, bisa diganti -->
+    <div class="product">
+      <img src="https://source.unsplash.com/200x150/?lipstick" alt="Lipstick">
+      <div class="product-name">Lipstick Matte</div>
+      <div class="product-price">Rp 49.000</div>
+    </div>
+    <div class="product">
+      <img src="https://source.unsplash.com/200x150/?skincare" alt="Skincare">
+      <div class="product-name">Facial Serum</div>
+      <div class="product-price">Rp 85.000</div>
+    </div>
+    <div class="product">
+      <img src="https://source.unsplash.com/200x150/?makeup" alt="Makeup Set">
+      <div class="product-name">Makeup Set Lengkap</div>
+      <div class="product-price">Rp 175.000</div>
+    </div>
+    <div class="product">
+      <img src="https://source.unsplash.com/200x150/?perfume" alt="Parfum">
+      <div class="product-name">Parfum Wanita</div>
+      <div class="product-price">Rp 120.000</div>
+    </div>
+    <div class="product">
+      <img src="https://source.unsplash.com/200x150/?foundation" alt="Foundation">
+      <div class="product-name">Liquid Foundation</div>
+      <div class="product-price">Rp 99.000</div>
+    </div>
+    <div class="product">
+      <img src="https://source.unsplash.com/200x150/?moisturizer" alt="Moisturizer">
+      <div class="product-name">Moisturizer Cream</div>
+      <div class="product-price">Rp 69.000</div>
+    </div>
+    <div class="product">
+      <img src="https://source.unsplash.com/200x150/?eyeshadow" alt="Eyeshadow">
+      <div class="product-name">Eyeshadow Palette</div>
+      <div class="product-price">Rp 88.000</div>
+    </div>
+    <div class="product">
+      <img src="https://source.unsplash.com/200x150/?sunscreen" alt="Sunscreen">
+      <div class="product-name">Sunscreen SPF 50+</div>
+      <div class="product-price">Rp 58.000</div>
+    </div>
+    <div class="product">
+      <img src="https://source.unsplash.com/200x150/?blush" alt="Blush On">
+      <div class="product-name">Blush On Cream</div>
+      <div class="product-price">Rp 45.000</div>
+    </div>
+    <div class="product">
+      <img src="https://source.unsplash.com/200x150/?masker" alt="Masker Wajah">
+      <div class="product-name">Sheet Mask (10 pcs)</div>
+      <div class="product-price">Rp 35.000</div>
+    </div>
+    <div class="product">
+      <img src="https://source.unsplash.com/200x150/?eyeliner" alt="Eyeliner">
+      <div class="product-name">Waterproof Eyeliner</div>
+      <div class="product-price">Rp 42.000</div>
+    </div>
+    <div class="product">
+      <img src="https://source.unsplash.com/200x150/?nailpolish" alt="Nail Polish">
+      <div class="product-name">Cat Kuku Warna Pastel</div>
+      <div class="product-price">Rp 22.000</div>
+    </div>
+    <div class="product">
+      <img src="https://source.unsplash.com/200x150/?toner" alt="Toner Wajah">
+      <div class="product-name">Brightening Toner</div>
+      <div class="product-price">Rp 67.000</div>
+    </div>
+    <div class="product">
+      <img src="https://source.unsplash.com/200x150/?haircare" alt="Haircare">
+      <div class="product-name">Hair Serum</div>
+      <div class="product-price">Rp 59.000</div>
+    </div>
+    <div class="product">
+      <img src="https://source.unsplash.com/200x150/?lipbalm" alt="Lip Balm">
+      <div class="product-name">Natural Lip Balm</div>
+      <div class="product-price">Rp 18.000</div>
+    </div>
+    <div class="product">
+      <img src="https://source.unsplash.com/200x150/?compactpowder" alt="Compact Powder">
+      <div class="product-name">Bedak Padat</div>
+      <div class="product-price">Rp 48.000</div>
+    </div>
+    <div class="product">
+      <img src="https://source.unsplash.com/200x150/?beauty" alt="Highlighter">
+      <div class="product-name">Glow Highlighter</div>
+      <div class="product-price">Rp 55.000</div>
+    </div>
+    <div class="product">
+      <img src="https://source.unsplash.com/200x150/?cosmetics" alt="Concealer">
+      <div class="product-name">Stick Concealer</div>
+      <div class="product-price">Rp 39.000</div>
+    </div>
+    <div class="product">
+      <img src="https://source.unsplash.com/200x150/?beautycream" alt="Night Cream">
+      <div class="product-name">Whitening Night Cream</div>
+      <div class="product-price">Rp 89.000</div>
+    </div>
+    <div class="product">
+      <img src="https://source.unsplash.com/200x150/?serum" alt="Serum Wajah">
+      <div class="product-name">Vitamin C Serum</div>
+      <div class="product-price">Rp 70.000</div>
+    </div>
+    <div class="product">
+      <img src="https://source.unsplash.com/200x150/?beautyproduct" alt="Beauty Tools">
+      <div class="product-name">Beauty Blender</div>
+      <div class="product-price">Rp 29.000</div>
+    </div>
+
+    <div class="product">
+      <img src="https://source.unsplash.com/200x150/?beautyproduct" alt="Beauty Tools">
+      <div class="product-name">Beauty Blender</div>
+      <div class="product-price">Rp 29.000</div>
+    </div>
+
+    <div class="product">
+      <img src="https://source.unsplash.com/200x150/?beautyproduct" alt="Beauty Tools">
+      <div class="product-name">Beauty Blender</div>
+      <div class="product-price">Rp 29.000</div>
+    </div>
+
+    <div class="product">
+      <img src="https://source.unsplash.com/200x150/?beautyproduct" alt="Beauty Tools">
+      <div class="product-name">Beauty Blender</div>
+      <div class="product-price">Rp 29.000</div>
+    </div>
+
+    <div class="product">
+      <img src="https://source.unsplash.com/200x150/?beautyproduct" alt="Beauty Tools">
+      <div class="product-name">Beauty Blender</div>
+      <div class="product-price">Rp 29.000</div>
+    </div>
+
+    <div class="product">
+      <img src="https://source.unsplash.com/200x150/?beautyproduct" alt="Beauty Tools">
+      <div class="product-name">Beauty Blender</div>
+      <div class="product-price">Rp 29.000</div>
+    </div>
+
+    <div class="product">
+      <img src="https://source.unsplash.com/200x150/?beautyproduct" alt="Beauty Tools">
+      <div class="product-name">Beauty Blender</div>
+      <div class="product-price">Rp 29.000</div>
+    </div>
+
+    <div class="product">
+      <img src="https://source.unsplash.com/200x150/?beautyproduct" alt="Beauty Tools">
+      <div class="product-name">Beauty Blender</div>
+      <div class="product-price">Rp 29.000</div>
+    </div>
+
+    <div class="product">
+      <img src="https://source.unsplash.com/200x150/?beautyproduct" alt="Beauty Tools">
+      <div class="product-name">Beauty Blender</div>
+      <div class="product-price">Rp 29.000</div>
+    </div>
+
+    <div class="product">
+      <img src="https://source.unsplash.com/200x150/?beautyproduct" alt="Beauty Tools">
+      <div class="product-name">Beauty Blender</div>
+      <div class="product-price">Rp 29.000</div>
+    </div>
+
+    <div class="product">
+      <img src="https://source.unsplash.com/200x150/?beautyproduct" alt="Beauty Tools">
+      <div class="product-name">Beauty Blender</div>
+      <div class="product-price">Rp 29.000</div>
+    </div>
+
+    <div class="product">
+      <img src="https://source.unsplash.com/200x150/?beautyproduct" alt="Beauty Tools">
+      <div class="product-name">Beauty Blender</div>
+      <div class="product-price">Rp 29.000</div>
+    </div>
+  </div>
+</body>
+</html>
